@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
 
     tbl = open(dist_fp)
-    tags = list(re.split("\s+", tbl.readline().strip()))
+    tags = list(re.split("\s+", tbl.readline().rstrip()))[1:]
     obs_dist=dict()
 
     for line in tbl.readlines():
